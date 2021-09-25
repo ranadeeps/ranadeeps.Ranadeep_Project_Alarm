@@ -1,0 +1,8 @@
+.card {
+  width: max-content;
+  margin: auto;
+  margin-top: 20px;
+}
+#clock:hover {
+  transform: scale(2);
+}
