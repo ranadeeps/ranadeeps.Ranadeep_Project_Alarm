@@ -1,4 +1,8 @@
 setInterval(show,1000);
+let dropHours = document.getElementById('hours');
+let dropMin = document.getElementById('min');
+let list = document.getElementById('alarmList');
+
 function show(){
     const d = new Date();
     let hour = d.getHours();
@@ -8,22 +12,30 @@ function show(){
     min= min< 10 ? "0" + min: min;
     sec = sec < 10 ? "0" + sec : sec;
     document.getElementById("time").value = hour + ":" + min+ ":" + sec;
+    // if(dropHours.value == hour && dropMin.value == min){
+    //     alertMsg();
+    // }
 }
+
+function setAlarm(){
+    let ele = document.createElement('li');
+    ele.textContent = dropHours.value + ":" + dropMin.value;
+    ele.className = "list-group-item";
+    list.appendChild(ele);
+}
+
 function loadHours(){
-    let dropHours = document.getElementById('hours');
     for (let i = 0; i <= 23; i++) {
         let ele = document.createElement('option');
         ele.text = i;
         ele.value = i;
-        dropHours.options.add(ele);
+        dropHours.appendChild(ele);
     }
-    let dropMin = document.getElementById('min');
     for (let i = 0; i <= 59; i++) {
         let ele = document.createElement('option');
         ele.text = i;
         ele.value = i;
-        dropMin.options.add(ele);
+        dropMin.appendChild(ele);
     }
-
 }
 window.onload = loadHours();

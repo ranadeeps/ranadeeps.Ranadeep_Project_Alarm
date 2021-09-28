@@ -11,6 +11,14 @@
 }
 .form-select {
   width: max-content;
-  margin: auto;
+  margin: 20px;
+  float: left;
+}
+.btnn {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
+}
+.list {
+  margin: 10px;
 }
