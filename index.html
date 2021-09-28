@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>
-            Alarm
+          Alarm
         </title>
         <link type="icon/image" rel="icon" href="./IMG/alarm-fill.svg">
         <link rel="stylesheet" type="text/css" href="./CSS/bootstrap.css">
@@ -10,56 +10,59 @@
     </head>
     <body>
         <nav class="navbar navbar-light bg-danger bg-opacity-25 border border-5">
-            <div class="container">
-              <a class="navbar-brand" href="./index.html">
-                <img src="./IMG/alarm-fill.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                Home
-              </a>
-            </div>
+          <div class="container">
+            <a class="navbar-brand" href="./index.html">
+              <img src="./IMG/alarm-fill.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+              Home
+            </a>
+          </div>
         </nav>
         <div class="card">
-            <h5 class="card-header">Alarm</h5>
-            <div class="card-body">
-                <div id="clock" class="input-group input-group-lg">
-                  <span class="input-group-text" id="inputGroup-sizing-lg">Time</span>
-                  <input type="text" id="time" class="form-control" dir="rtl" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" disabled>
-                </div>
-                <!-- Button trigger modal -->
-                <div class="btnn"> 
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal"  data-bs-target="#staticBackdrop">
-                    New Alarm
-                  </button>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Alarm</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <select id="hours" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                          <option selected>Hours</option>
-                        </select>
-                        <select id="min" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                          <option selected>Minutes</option>
-                        </select>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="setAlarm()">Set Alarm</button>
-                      </div>
-                    </div>
+          <h5 class="card-header">Alarm</h5>
+          <div class="card-body">
+            <div id="clock" class="input-group input-group-lg">
+              <span class="input-group-text" id="inputGroup-sizing-lg">Time</span>
+              <input type="text" id="time" class="form-control" dir="rtl" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" disabled>
+            </div>
+              <!-- Button trigger modal -->
+            <div class="btnn"> 
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal"  data-bs-target="#staticBackdrop">
+                New Alarm
+              </button>
+            </div>
+              <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Alarm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <select id="hours" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option selected>Hours</option>
+                    </select>
+                    <select id="min" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                      <option selected>Minutes</option>
+                    </select>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="setAlarm()">Set Alarm</button>
                   </div>
                 </div>
-                <div class="list">
-                  <h5>Scheduled Alarms</h5>
-                  <ul id="alarmList" class="list-group"></ul>
-                </div>
-            </div>  
+              </div>
+            </div>
+            <div class="list">
+              <h5>Scheduled Alarms</h5>
+              <ul id="alarmList" class="list-group"></ul>
+            </div>
+            <audio loop id="tone" src="./AUDIO/mixkit-warning-alarm-buzzer-991.wav">
+            </audio>
           </div>
-          <script type="text/javascript" src="./JS/bootstrap.js"></script>
-          <script type="text/javascript" src="./JS/script.js"></script>
+          <button id="stp" type="button" onclick="stp()" class="btn btn-outline-danger">Stop</button>
+        </div>
+        <script type="text/javascript" src="./JS/bootstrap.js"></script>
+        <script type="text/javascript" src="./JS/script.js"></script>
     </body>
 </html>
