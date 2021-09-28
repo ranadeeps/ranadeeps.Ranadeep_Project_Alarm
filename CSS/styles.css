@@ -22,3 +22,7 @@
 .list {
   margin: 10px;
 }
+li {
+  font-weight: bold;
+  font-size: xx-large;
+}
