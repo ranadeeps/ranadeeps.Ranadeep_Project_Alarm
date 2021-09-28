@@ -39,7 +39,7 @@ function loadHours(){
 function setAlarm(){
     let ele = document.createElement('li');
     ele.textContent = dropHours.value + ":" + dropMin.value;
-    ele.className = "list-group-item";
+    ele.className = "list-group-item border border-info";
     ele.id = dropHours.value + dropMin.value;
     let btn = document.createElement('button');
     btn.style.float = 'right';
