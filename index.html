@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar navbar-light bg-danger bg-opacity-25 border border-5">
             <div class="container">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="./index.html">
                 <img src="./IMG/alarm-fill.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 Home
               </a>
@@ -21,9 +21,15 @@
             <h5 class="card-header">Alarm</h5>
             <div class="card-body">
                 <div id="clock" class="input-group input-group-lg">
-                    <span class="input-group-text" id="inputGroup-sizing-lg">Time</span>
-                    <input type="text" id="time" class="form-control" dir="rtl" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" disabled>
-                  </div>
+                  <span class="input-group-text" id="inputGroup-sizing-lg">Time</span>
+                  <input type="text" id="time" class="form-control" dir="rtl" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" disabled>
+                </div>
+                <select id="hours" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option selected>Hours</option>
+                </select>
+                <select id="min" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                  <option selected>Minutes</option>
+                </select>
             </div>
           </div>
         <script type="text/javascript" src="./JS/script.js"></script>

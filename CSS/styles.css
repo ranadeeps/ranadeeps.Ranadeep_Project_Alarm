@@ -3,6 +3,14 @@
   margin: auto;
   margin-top: 20px;
 }
+#clock {
+  transition: ease;
+}
 #clock:hover {
   transform: scale(2);
+}
+.form-select {
+  width: max-content;
+  margin: auto;
+  margin-top: 20px;
 }
